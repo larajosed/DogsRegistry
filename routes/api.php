@@ -18,4 +18,4 @@ header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: *");
 
 Route::get('dogs', 'DogController@getAll');
-Route::get('dogs/{id}', 'DogController@get');
+Route::get('dogs/{id}', 'DogController@getById');
