@@ -12,7 +12,7 @@ class DogController extends Controller
      *
      * @param  int  $id
      */
-    public function get($id) 
+    public function getById($id) 
     {
         return Dog::findOrFail($id);
     }
