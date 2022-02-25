@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '@/components/TheWelcome.vue'
+import DogsTable from "@/components/DogsTable.vue";
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <DogsTable />
   </main>
 </template>
