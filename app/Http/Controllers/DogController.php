@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
  
 use App\Dog;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
  
 class DogController extends Controller
 {
@@ -22,5 +23,14 @@ class DogController extends Controller
      */
      public function getAll(){
          return Dog::all();
+     }
+
+     public function add(Request $request){
+        $dog = New Dog();
+        $dog->race = $request->input('race');
+        $dog->size = $request->input('size');
+        $dog->color = $request->input('color');
+        $dog->photo = 'foto';
+        $dog->save();
      }
 }

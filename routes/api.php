@@ -19,3 +19,4 @@ header("Access-Control-Allow-Headers: *");
 
 Route::get('dogs', 'DogController@getAll');
 Route::get('dogs/{id}', 'DogController@getById');
+Route::post('dogs', 'DogController@add');
