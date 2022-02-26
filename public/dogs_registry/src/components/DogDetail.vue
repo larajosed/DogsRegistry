@@ -15,12 +15,9 @@ export default {
     DogsService.getById(route.params.id).then((response) => {
       data.dog = response.data;
     });
-    function goBack() {
-      router.back();
-    }
+
     return {
       data,
-      goBack,
     };
   },
 };
@@ -29,7 +26,6 @@ export default {
 <template>
   <div>
     <div>
-      <button v-on:click="goBack">Volver</button>
       <h1>Raza: {{ data.dog.race }}</h1>
       <p>Tamaño: {{ data.dog.size }}</p>
       <p>Color: {{ data.dog.color }}</p>

@@ -2,5 +2,10 @@
 import DogDetail from "@/components/DogDetail.vue";
 </script>
 <template>
-  <DogDetail></DogDetail>
+  <div>
+    <router-link :to="{ name: 'home' }">
+      <button>Volver al listado</button>
+    </router-link>
+    <DogDetail></DogDetail>
+  </div>
 </template>
