@@ -5,3 +5,9 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <RouterView />
 </template>
+
+<style>
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+</style>
