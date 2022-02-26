@@ -28,9 +28,14 @@ export default {
 
 <template>
   <div>
-    <button v-on:click="goBack">Volver</button>
-    <h1>Raza: {{ data.dog.race }}</h1>
-    <p>Tamaño: {{ data.dog.size }}</p>
-    <p>Color: {{ data.dog.color }}</p>
+    <div>
+      <button v-on:click="goBack">Volver</button>
+      <h1>Raza: {{ data.dog.race }}</h1>
+      <p>Tamaño: {{ data.dog.size }}</p>
+      <p>Color: {{ data.dog.color }}</p>
+    </div>
+    <div>
+      <img :src="data.dog.photo" alt="" />
+    </div>
   </div>
 </template>

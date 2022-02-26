@@ -44,7 +44,7 @@ export default {
           v-for="dog in data.dogs"
           v-on:click="goToDetail(dog.id)"
         >
-          <td><img src="" alt="" /></td>
+          <td><img class="photo" :src="dog.photo" alt="" /></td>
           <td>{{ dog.race }}</td>
           <td>{{ dog.size }}</td>
           <td>{{ dog.color }}</td>
@@ -73,5 +73,9 @@ td,
 th {
   text-align: center;
   border: 1px solid;
+}
+.photo {
+  max-height: 110px;
+  max-width: 110px;
 }
 </style>
