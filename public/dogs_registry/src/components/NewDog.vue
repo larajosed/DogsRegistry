@@ -6,7 +6,7 @@ import { useRouter } from "vue-router";
 export default {
   setup(props, ctx) {
     const router = useRouter();
-    const newDog = { size: "Pequeño" };
+    const newDog = reactive({ size: "Pequeño" });
 
     function submitDog(dog) {
       console.log(dog);
@@ -92,6 +92,9 @@ export default {
           accept="image/*"
           required
         />
+        <div class="photo-preview-container" v-if="newDog.photo">
+          <img class="photo-preview" :src="newDog.photo" alt="" />
+        </div>
       </div>
       <div class="input-block">
         <button type="submit">Enviar</button>
@@ -120,5 +123,15 @@ export default {
 
 .form-new-dog input[type="radio"] {
   margin-left: 20px;
+}
+
+.photo-preview {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.photo-preview-container {
+  margin-top: 10px;
+  text-align: right;
 }
 </style>
