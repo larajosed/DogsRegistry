@@ -30,7 +30,7 @@ class DogController extends Controller
         $dog->race = $request->input('race');
         $dog->size = $request->input('size');
         $dog->color = $request->input('color');
-        $dog->photo = 'foto';
+        $dog->photo = $request->input('photo');
         $dog->save();
      }
 }

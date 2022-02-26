@@ -19,9 +19,18 @@ export default {
         }
       );
     }
+    function updatePhoto(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        newDog.photo = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
     return {
       newDog,
       submitDog,
+      updatePhoto,
     };
   },
 };
@@ -72,6 +81,15 @@ export default {
     <div>
       <label for="color">Color</label>
       <input v-model="newDog.color" type="text" id="color" required />
+    </div>
+    <div>
+      <label for="photo">Foto</label>
+      <input
+        type="file"
+        v-on:change="updatePhoto"
+        ref="fileInput"
+        accept="image/*"
+      />
     </div>
     <button type="submit">Enviar</button>
   </form>
